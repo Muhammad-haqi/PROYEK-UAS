@@ -82,11 +82,9 @@ export default function PesanPage() {
       alert("Jumlah kursi harus sesuai jumlah penumpang!");
       return;
     }
-    // Simpan ke localStorage atau sesuai kebutuhan aplikasi.
     navigate("/riwayat");
   }
 
-  // Hitung harga
   const hargaMaskapai = maskapaiData.find(m => m.nama === form.maskapai)?.harga || 0;
   const kelasMultiplier = kelasOptions.find(k => k.label === form.kelas)?.multiplier || 1;
   const totalHarga = hargaMaskapai * kelasMultiplier * form.penumpang;
@@ -96,7 +94,7 @@ export default function PesanPage() {
       <div className="max-w-4xl mx-auto rounded-xl shadow-lg bg-white p-8">
         <h2 className="text-2xl font-extrabold mb-5 text-blue-800">Detail Pemesan & Penumpang</h2>
         
-        {/* Form Pemesan */}
+        {}
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
             <div>
@@ -137,7 +135,7 @@ export default function PesanPage() {
             </div>
           </div>
 
-          {/* Rute & Maskapai */}
+          {}
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <label className="font-semibold">Asal*</label>
@@ -218,7 +216,7 @@ export default function PesanPage() {
             </div>
           </div>
 
-          {/* Data Penumpang */}
+          {}
           <div>
             <label className="font-semibold">Nama Penumpang</label>
             {form.namaPenumpang.map((np, i) => (
@@ -234,7 +232,7 @@ export default function PesanPage() {
             ))}
           </div>
           
-          {/* Pilih Kursi */}
+          {}
           <div>
             <label className="font-semibold">Pilih Kursi</label>
             <div className="grid grid-cols-6 gap-2 mt-2 p-2 bg-gray-50 border rounded">
@@ -255,7 +253,7 @@ export default function PesanPage() {
             </div>
           </div>
           
-          {/* Total Harga */}
+          {}
           <div>
             <label className="font-semibold">Total Harga</label>
             <div className="bg-gray-100 p-2 rounded border font-bold text-lg">
@@ -263,7 +261,7 @@ export default function PesanPage() {
             </div>
           </div>
 
-          {/* Tombol Submit */}
+          {}
           <button type="submit" className="btn-primary-lg w-full">Lanjut Bayar</button>
         </form>
       </div>
